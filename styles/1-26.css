@@ -1,0 +1,33 @@
+body {
+  max-width: 500px;
+  background-color: palevioletred;
+  border-style: dashed;
+  margin: 0 auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.white {
+  color: white;
+  text-align: center;
+}
+
+.second-quote {
+  font-family: "Times New Roman", Times, serif;
+  font-size: xx-large;
+}
+
+h1:hover {
+  color: black;
+}
+
+div {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+li {
+  font-weight: 600;
+}
