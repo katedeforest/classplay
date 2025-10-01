@@ -1,0 +1,50 @@
+body {
+  background-color: darkblue;
+}
+
+#contactform {
+  background-color: teal;
+  width: 90%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#contactform legend,
+#contactform label {
+  color: lightgray;
+}
+#contactform input,
+#contactform textarea {
+  background-color: lightgray;
+  flex: 2;
+  width: 100%;
+  max-width: 100%;
+}
+#contactform div {
+  display: flex;
+}
+@media (max-width: 20em) {
+  #contactform {
+    flex-direction: column;
+  }
+}
+@media (max-width: 31em) {
+  #contactform {
+    flex-direction: row;
+  }
+}
+@media (max-width: 60em) {
+  #contactform {
+    width: 70%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+  }
+}
+
+h1 {
+  color: lightgray;
+}
+
+/*# sourceMappingURL=styles.css.map */

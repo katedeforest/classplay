@@ -1,0 +1,73 @@
+// colors
+$body-background-color: darkblue;
+$form-background-color: teal;
+$headline-color: lightgray;
+$input-color: lightgray;
+// breakpoints
+$break-small: 20em;
+$break-medium: 31em;
+$break-large: 60em;
+
+@mixin center($width, $max-width: 960px) {
+  width: $width;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin breakpoint($break) {
+  @if $break == large {
+    @media (max-width: $break-large) {
+      @content;
+    }
+  } @else if $break == medium {
+    @media (max-width: $break-medium) {
+      @content;
+    }
+  } @else if $break == small {
+    @media (max-width: $break-small) {
+      @content;
+    }
+  } @else {
+    @media ($break) {
+      @content;
+    }
+  }
+}
+
+body {
+  background-color: $body-background-color;
+}
+
+#contactform {
+  background-color: $form-background-color;
+  @include center(90%);
+  legend,
+  label {
+    color: $headline-color;
+  }
+  input,
+  textarea {
+    background-color: $input-color;
+    flex: 2;
+    width: 100%;
+    max-width: 100%;
+  }
+  div {
+    display: flex;
+  }
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
+  @include breakpoint(large) {
+    @include center(70%, 900px);
+    flex-direction: row;
+  }
+}
+
+h1 {
+  color: $headline-color;
+}
